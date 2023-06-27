@@ -64,7 +64,7 @@ ESLint:
 
 1. В файле `settings.json` (File > Preferences > Settings) добавьте следующую строку:
 
-```
+```json
 "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
 }
@@ -76,7 +76,7 @@ Prettier:
 
 1. В файле `settings.json` (File > Preferences > Settings) добавьте следующие строки:
 
-```
+```json
 "[javascript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode",
 },
