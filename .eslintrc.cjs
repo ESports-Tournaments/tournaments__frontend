@@ -5,6 +5,10 @@ module.exports = configure({
 
   presets: [
     presets.imports({
+      sort: {
+        // (optional) Add newline between import groups
+        newline: true,
+      },
       alias: {
         root: './src',
         paths: { '~': './' },
@@ -20,6 +24,7 @@ module.exports = configure({
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       'import/no-default-export': 'off',
+      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
 });
