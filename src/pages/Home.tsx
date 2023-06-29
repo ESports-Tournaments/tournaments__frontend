@@ -3,14 +3,14 @@ import { useAppSelector } from '~/hooks/useAppSelector';
 import { exampleActions } from '~/store/features/example';
 import { selectCounter } from '~/store/features/example/selector';
 
-export default function HomePage() {
+export const HomePage = () => {
   const counter = useAppSelector(selectCounter);
 
   const dispatch = useAppDispatch();
 
   return (
     <main>
-      <div>Example store:</div>
+      <div>Home store:</div>
       <br />
       <div>
         <button type="button" onClick={() => dispatch(exampleActions.decrememt())}>
@@ -34,4 +34,4 @@ export default function HomePage() {
       <div>counter: {counter}</div>
     </main>
   );
-}
+};
