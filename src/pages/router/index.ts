@@ -22,11 +22,6 @@ export enum RouteNames {
 
 export const routes: IRoute[] = [
   {
-    path: RouteNames.HOME,
-    component: HomePage,
-    authorised: false,
-  },
-  {
     path: RouteNames.LOGIN,
     component: Login,
     authorised: false,
@@ -44,6 +39,11 @@ export const routes: IRoute[] = [
   {
     path: RouteNames.TOURNAMENTS,
     component: Tournaments,
+    authorised: false,
+  },
+  {
+    path: RouteNames.HOME,
+    component: HomePage,
     authorised: false,
   },
 ];
