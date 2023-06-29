@@ -2,6 +2,7 @@ import type * as React from 'react';
 
 import { HomePage } from '~/pages/Home';
 import { Login } from '~/pages/Login';
+import { NotFoundPage } from '~/pages/NotFoundPage';
 import { Profile } from '~/pages/Profile';
 import { Team } from '~/pages/Team';
 import { Tournaments } from '~/pages/Tournaments';
@@ -18,6 +19,7 @@ export enum RouteNames {
   TEAM = '/team',
   TOURNAMENTS = '/tournaments',
   HOME = '/',
+  NOTFOUNDPAGE = '*',
 }
 
 export const routes: IRoute[] = [
@@ -44,6 +46,11 @@ export const routes: IRoute[] = [
   {
     path: RouteNames.HOME,
     component: HomePage,
+    authorised: false,
+  },
+  {
+    path: RouteNames.NOTFOUNDPAGE,
+    component: NotFoundPage,
     authorised: false,
   },
 ];
