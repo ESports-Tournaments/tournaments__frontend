@@ -3,6 +3,8 @@ import { useAppSelector } from '~/hooks/useAppSelector';
 import { exampleActions } from '~/store/features/example';
 import { selectCounter } from '~/store/features/example/selector';
 
+import { BaseButton } from '../ui-kit/BaseButton';
+
 export default function HomePage() {
   const counter = useAppSelector(selectCounter);
 
@@ -10,6 +12,7 @@ export default function HomePage() {
 
   return (
     <main>
+      <BaseButton onClick={() => dispatch(exampleActions.increment())}>play</BaseButton>
       <div>Example store:</div>
       <br />
       <div>
