@@ -1,11 +1,20 @@
+import type { FC } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
-import HomePage from './Home';
+import { NotFound } from '~/components/NotFound';
+import { RootLayout } from '~/layout/RootLayout';
 
-export default function Routing() {
+import { HomePage } from './HomePage';
+
+const Routing: FC = () => {
   return (
     <Routes>
-      <Route index element={<HomePage />} />
+      <Route element={<RootLayout />}>
+        <Route index element={<HomePage />} />
+        <Route path="*" element={<NotFound />} />
+      </Route>
     </Routes>
   );
-}
+};
+
+export default Routing;
