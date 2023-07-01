@@ -1,0 +1,71 @@
+:root {
+  --appbar-bg-color: #242429;
+}
+
+.root {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: var(--appbar-bg-color);
+  height: 64px;
+
+  @media (min-width: 768px) {
+    position: static;
+  }
+
+  @media (min-width: 1024px) {
+    height: 66px;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1380px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 15;
+
+  @media (min-width: 1024px) {
+    padding: 0 30px;
+  }
+}
+
+.mobileMenuToggle {
+  color: var(--white-color);
+  composes: btnReset from global;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.logo {
+  color: var(--white-color);
+  display: flex;
+  align-items: center;
+  height: 64px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.left {
+  display: flex;
+  margin-right: 16px;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  background: #000;
+  border-radius: 100%;
+}
