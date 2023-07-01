@@ -1,0 +1,30 @@
+.content {
+  padding-top: 40px;
+  flex-grow: 1;
+  background-image: url(https://pvp.vkplay.ru/img/main-layout/bg.svg);
+  background-repeat: no-repeat;
+  background-position: 50% top;
+}
+
+.container {
+  min-width: 320px;
+  max-width: 100%;
+  padding: 0 12px;
+  margin: 0 auto;
+
+  @media (min-width: 568px) {
+    width: 544px;
+  }
+
+  @media (min-width: 768px) {
+    width: 744px;
+  }
+
+  @media (min-width: 1018px) {
+    width: 970px;
+  }
+
+  @media (min-width: 1248px) {
+    width: 1200px;
+  }
+}
