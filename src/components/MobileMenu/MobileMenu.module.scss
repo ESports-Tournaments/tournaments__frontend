@@ -1,0 +1,45 @@
+.root {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 64px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-color);
+  cursor: pointer;
+}
+
+.container {
+  position: absolute;
+  overflow-y: auto;
+  top: 64px;
+  height: calc(100% - 64px);
+  z-index: 1;
+  width: 100%;
+  background: var(--mobile-menu-bg-color);
+
+  @media (min-width: 500px) {
+    width: 320px;
+  }
+}
+
+.content {
+  background: var(--mobile-menu-bg-gradient);
+  padding: 10px 0 60px;
+  border-radius: 10px 10px 0 0;
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
