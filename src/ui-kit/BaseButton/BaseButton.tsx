@@ -1,15 +1,16 @@
-import type { FC, ReactNode } from 'react';
+import { forwardRef } from 'react';
 
 import styles from './BaseButton.module.scss';
 
-type ButtonProps = {
+type Props = {
   onClick: () => void;
   disabled?: boolean;
-  children: ReactNode;
+  name: string;
 };
+export type Ref = HTMLButtonElement;
 
-export const BaseButton: FC<ButtonProps> = ({ onClick, disabled, children }) => (
-  <button onClick={onClick} disabled={disabled} className={styles.baseButton}>
-    {children}
-  </button>
-);
+const BaseButton = forwardRef<Ref, Props>((props, ref) => {
+  return <button {...props} className={styles.baseButton} ref={ref} />;
+});
+
+export default BaseButton;

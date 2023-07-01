@@ -1,18 +1,25 @@
+import { useRef } from 'react';
+
 import { useAppDispatch } from '~/hooks/useAppDispatch';
 import { useAppSelector } from '~/hooks/useAppSelector';
 import { exampleActions } from '~/store/features/example';
 import { selectCounter } from '~/store/features/example/selector';
-
-import { BaseButton } from '../ui-kit/BaseButton';
+import BaseButton from '~/ui-kit/BaseButton/BaseButton';
 
 export default function HomePage() {
   const counter = useAppSelector(selectCounter);
 
   const dispatch = useAppDispatch();
 
+  const btnRef = useRef<HTMLButtonElement>(null);
+
   return (
     <main>
-      <BaseButton onClick={() => dispatch(exampleActions.increment())}>play</BaseButton>
+      <BaseButton
+        onClick={() => dispatch(exampleActions.increment())}
+        name="play"
+        ref={btnRef}
+      />
       <div>Example store:</div>
       <br />
       <div>
