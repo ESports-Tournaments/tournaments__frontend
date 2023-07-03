@@ -24,7 +24,6 @@ module.exports = configure({
     rules: {
       '@typescript-eslint/consistent-type-definitions': ['error', 'type'],
       'import/no-default-export': 'off',
-      '@typescript-eslint/consistent-type-imports': 'error',
     },
   },
 });
