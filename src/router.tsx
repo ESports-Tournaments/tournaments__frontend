@@ -1,4 +1,4 @@
-import * as React from 'react';
+import { createBrowserRouter } from 'react-router-dom';
 
 import { HomePage } from '~/pages/Home';
 import { Login } from '~/pages/Login';
@@ -6,12 +6,6 @@ import { NotFoundPage } from '~/pages/NotFoundPage';
 import { Profile } from '~/pages/Profile';
 import { Team } from '~/pages/Team';
 import { Tournaments } from '~/pages/Tournaments';
-
-export type IRoute = {
-  path: string;
-  component: React.ComponentType;
-  authorised: boolean;
-};
 
 export enum RouteNames {
   LOGIN = '/login',
@@ -22,35 +16,29 @@ export enum RouteNames {
   NOTFOUNDPAGE = '*',
 }
 
-export const routes: IRoute[] = [
+export const router = createBrowserRouter([
   {
     path: RouteNames.LOGIN,
-    component: Login,
-    authorised: false,
+    element: <Login />,
   },
   {
     path: RouteNames.PROFILE,
-    component: Profile,
-    authorised: false,
+    element: <Profile />,
   },
   {
     path: RouteNames.TEAM,
-    component: Team,
-    authorised: false,
+    element: <Team />,
   },
   {
     path: RouteNames.TOURNAMENTS,
-    component: Tournaments,
-    authorised: false,
+    element: <Tournaments />,
   },
   {
     path: RouteNames.HOME,
-    component: HomePage,
-    authorised: false,
+    element: <HomePage />,
   },
   {
     path: RouteNames.NOTFOUNDPAGE,
-    component: NotFoundPage,
-    authorised: false,
+    element: <NotFoundPage />,
   },
-];
+]);

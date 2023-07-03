@@ -1,12 +1,16 @@
-import Routing from './pages';
+import { FC } from 'react';
+import { RouterProvider } from 'react-router-dom';
+
+import { router } from '~/router';
+
 import { withProviders } from './providers/withProviders';
 
-function App() {
+const App: FC = () => {
   return (
     <>
-      <Routing />
+      <RouterProvider router={router} />
     </>
   );
-}
+};
 
 export default withProviders(App);
