@@ -1,14 +1,13 @@
 import { FC } from 'react';
-import { RouterProvider } from 'react-router-dom';
 
-import { router } from '~/router';
+import Router from '~/Router';
 
 import { withProviders } from './providers/withProviders';
 
 const App: FC = () => {
   return (
     <>
-      <RouterProvider router={router} />
+      <Router />
     </>
   );
 };

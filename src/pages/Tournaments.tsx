@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
-export const Tournaments: FC = () => {
+const Tournaments: FC = () => {
   return <div>Tournaments</div>;
 };
+
+export default Tournaments;

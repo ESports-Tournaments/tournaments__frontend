@@ -1,13 +1,14 @@
-import { createBrowserRouter } from 'react-router-dom';
+import { FC } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import { HomePage } from '~/pages/Home';
-import { Login } from '~/pages/Login';
-import { NotFoundPage } from '~/pages/NotFoundPage';
-import { Profile } from '~/pages/Profile';
-import { Team } from '~/pages/Team';
-import { Tournaments } from '~/pages/Tournaments';
+import HomePage from '~/pages/Home';
+import Login from '~/pages/Login';
+import NotFoundPage from '~/pages/NotFoundPage';
+import Profile from '~/pages/Profile';
+import Team from '~/pages/Team';
+import Tournaments from '~/pages/Tournaments';
 
-export enum RouteNames {
+enum RouteNames {
   LOGIN = '/login',
   PROFILE = '/profile',
   TEAM = '/team',
@@ -16,7 +17,7 @@ export enum RouteNames {
   NOTFOUNDPAGE = '*',
 }
 
-export const router = createBrowserRouter([
+const router = createBrowserRouter([
   {
     path: RouteNames.LOGIN,
     element: <Login />,
@@ -42,3 +43,9 @@ export const router = createBrowserRouter([
     element: <NotFoundPage />,
   },
 ]);
+
+const Router: FC = () => {
+  return <RouterProvider router={router} />;
+};
+
+export default Router;

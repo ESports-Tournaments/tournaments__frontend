@@ -1,5 +1,7 @@
 import { FC } from 'react';
 
-export const Team: FC = () => {
+const Team: FC = () => {
   return <div>Team</div>;
 };
+
+export default Team;
