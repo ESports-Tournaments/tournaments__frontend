@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import * as React from 'react';
 
 import styles from './BaseButton.module.scss';
 
@@ -7,10 +7,15 @@ type Props = {
   disabled?: boolean;
   name: string;
 };
-export type Ref = HTMLButtonElement;
 
-const BaseButton = forwardRef<Ref, Props>((props, ref) => {
-  return <button {...props} className={styles.baseButton} ref={ref} />;
-});
+const BaseButton = React.forwardRef<HTMLButtonElement, Props>(
+  ({ name, ...props }, ref) => {
+    return (
+      <button {...props} className={styles.baseButton} ref={ref}>
+        {name}
+      </button>
+    );
+  },
+);
 
 export default BaseButton;
