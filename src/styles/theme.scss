@@ -25,4 +25,67 @@
 
   --link-color: #16a7ff;
   --link-color-hover: #56bfff;
+
+  --font-size-xxs: 12px;
+  --font-size-xs: 16px;
+  --font-size-s: 18px;
+  --font-size-m: 24px;
+  --font-size-l: 32px;
+  --font-size-xl: 42px;
+  --fontNormal: 400;
+  --fontMedium: 600;
+  --fontBold: 700;
+  --font-name: 'SharpGrotesk';
+
+  --font-family: var(--font-name), sans-serif;
+
+  --white-color: #fff;
+  --main-color-black: #000;
+  --main-color-white: #f5f5f7;
+  --additional-text-color: #f5f5f7;
+
+  --button-bg-primary: #16a7ff;
+  --button-bg-primary-hover: #1981cc;
+
+  --button-bg-secondary: #e2e3e7;
+  --button-bg-secondary-hover: #dbdcdf;
+  --button-bg-secondary-active: #c7c7cb;
+
+  --transition-short: 0.15s;
+  --transition-long: 0.3s;
+
+  --gradient-start: #16a7ff;
+  --gradient-end: #1981cc;
+  --gradient: linear-gradient(90deg, var(--gradient-start), #16a7ff, var(--gradient-end));
 }
+
+$font-size-xxs: 12px;
+$font-size-xs: 16px;
+$font-size-s: 18px;
+$font-size-m: 24px;
+$font-size-l: 32px;
+$font-size-xl: 42px;
+$fontNormal: 400;
+$fontMedium: 600;
+$fontBold: 700;
+$font-name: 'SharpGrotesk';
+
+$font-family: $font-name, sans-serif;
+$white-color: #fff;
+$main-color-black: #000;
+$main-color-white: #f5f5f7;
+$additional-text-color: #f5f5f7;
+
+$button-bg-primary: #16a7ff;
+$button-bg-primary-hover: #1981cc;
+
+$button-bg-secondary: #e2e3e7;
+$button-bg-secondary-hover: #dbdcdf;
+$button-bg-secondary-active: #c7c7cb;
+
+$transition-short: 0.15s;
+$transition-long: 0.3s;
+
+$gradient-start: #16a7ff;
+$gradient-end: #1981cc;
+$gradient: linear-gradient(90deg, $gradient-start, #16a7ff, $gradient-end);

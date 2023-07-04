@@ -1,12 +1,13 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 
-import Routing from './pages';
+import Router from '~/Router';
+
 import { withProviders } from './providers/withProviders';
 
 const App: FC = () => {
   return (
     <>
-      <Routing />
+      <Router />
     </>
   );
 };
