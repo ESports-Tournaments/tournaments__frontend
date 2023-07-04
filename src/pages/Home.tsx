@@ -1,12 +1,12 @@
 import { FC } from 'react';
 
-import BaseButton from '~/ui-kit/BaseButton';
+import Button from '~/ui-kit/Button';
 
 const HomePage: FC = () => {
   return (
     <div>
       <div>HomePage</div>
-      <BaseButton name="Регистрация" onClick={() => console.log(1)} />
+      <Button name="Регистрация" onClick={() => console.log(1)} />
     </div>
   );
 };
