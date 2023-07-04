@@ -3,7 +3,8 @@ import clsx from 'clsx';
 import { type FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import { MobileMenu } from '../MobileMenu';
+import { MobileMenu } from '~/components/MobileMenu';
+
 import style from './AppBar.module.scss';
 
 export const AppBar: FC = () => {
