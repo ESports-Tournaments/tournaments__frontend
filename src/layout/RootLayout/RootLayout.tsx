@@ -6,7 +6,7 @@ import { Header } from '~/components/Header';
 
 import style from './RootLayout.module.scss';
 
-export const RootLayout: FC = () => {
+const RootLayout: FC = () => {
   return (
     <>
       <AppBar />
@@ -20,3 +20,5 @@ export const RootLayout: FC = () => {
     </>
   );
 };
+
+export default RootLayout;
