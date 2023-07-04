@@ -29,5 +29,15 @@ export default defineConfig(({ mode }) => {
         filename: 'analyse.html', // will be saved in project's root
       }) as PluginOption,
     ],
+
+    css: {
+      preprocessorOptions: {
+        scss: {
+          additionalData: `
+          @import "./src/styles/theme.scss";
+        `,
+        },
+      },
+    },
   };
 });

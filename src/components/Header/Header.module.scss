@@ -1,6 +1,6 @@
 .root {
   box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.31), inset 0 -1px 0 0 hsla(0, 0%, 100%, 0.1);
-  color: var(--header-menu-item-color);
+  color: $header-menu-item-color;
 }
 
 .container {
@@ -11,7 +11,7 @@
   margin: 0 auto;
   padding: 0 6px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     padding: 0 14px;
   }
 }
@@ -19,13 +19,13 @@
 .menuItem {
   display: inline-block;
   padding: 8px 16px;
-  color: var(--header-menu-item-color);
+  color: $header-menu-item-color;
   font-size: 16px;
   font-weight: 700;
 
   &.active,
   &:hover {
-    color: var(--text-color-lightest);
+    color: $text-color-lightest;
   }
 
   &.disabled {

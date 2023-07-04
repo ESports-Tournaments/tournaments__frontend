@@ -2,14 +2,14 @@
   position: sticky;
   top: 0;
   z-index: 20;
-  background-color: var(--appbar-bg-color);
+  background-color: $appbar-bg-color;
   height: 64px;
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     position: static;
   }
 
-  @media (min-width: 1024px) {
+  @media (min-width: $tablet-l) {
     height: 66px;
   }
 }
@@ -25,13 +25,13 @@
   align-items: center;
   z-index: 15;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $tablet-l) {
     padding: 0 30px;
   }
 }
 
 .mobileMenuToggle {
-  color: var(--white-color);
+  color: $white-color;
   composes: btnReset from global;
   width: 64px;
   height: 64px;
@@ -39,13 +39,13 @@
   justify-content: center;
   align-items: center;
 
-  @media (min-width: 1024px) {
+  @media (min-width: $tablet-l) {
     display: none;
   }
 }
 
 .logo {
-  color: var(--white-color);
+  color: $white-color;
   display: flex;
   align-items: center;
   height: 64px;
@@ -62,6 +62,6 @@
 .userAvatar {
   width: 36px;
   height: 36px;
-  background: #000;
+  background: $main-color-black;
   border-radius: 100%;
 }

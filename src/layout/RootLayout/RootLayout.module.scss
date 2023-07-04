@@ -7,24 +7,24 @@
 }
 
 .container {
-  min-width: var(--mobile-s);
+  min-width: $mobile-s;
   max-width: 100%;
   padding: 0 12px;
   margin: 0 auto;
 
-  @media (min-width: 568px) {
+  @media (min-width: $mobile-l) {
     width: 544px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $tablet) {
     width: 744px;
   }
 
-  @media (min-width: 1018px) {
+  @media (min-width: $tablet-l) {
     width: 970px;
   }
 
-  @media (min-width: 1248px) {
+  @media (min-width: $desktop) {
     width: 1200px;
   }
 }

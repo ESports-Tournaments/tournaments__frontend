@@ -1,31 +1,4 @@
 :root {
-  --appbar-bg-color: #242429;
-
-  --header-menu-item-color: rgba(245, 245, 247, 0.6);
-
-  --mobile-menu-bg-gradient: linear-gradient(to top, #1e2125 0%, rgba(30, 33, 37, 0) 100%),
-    #000;
-  --mobile-menu-bg-color: #242429;
-
-  --overlay-color: rgba(3, 3, 3, 0.6);
-
-  --default-font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system,
-    Arial, sans-serif;
-
-  --white-color: #fff;
-
-  --main-color-black: #000;
-
-  --text-color: #898989;
-  --text-color-lighter: #ababae;
-  --text-color-light: #c3c3c3;
-  --text-color-lightest: #f5f5f7;
-
-  --body-text-color: #f3f3f3;
-
-  --link-color: #16a7ff;
-  --link-color-hover: #56bfff;
-
   --font-size-xxs: 12px;
   --font-size-xs: 16px;
   --font-size-s: 18px;
@@ -59,6 +32,32 @@
   --gradient: linear-gradient(90deg, var(--gradient-start), #16a7ff, var(--gradient-end));
 }
 
+$default-font-family: 'Roboto', 'Segoe UI', 'Helvetica Neue', system-ui, -apple-system,
+  Arial, sans-serif;
+
+$appbar-bg-color: #242429;
+
+$white-color: #fff;
+
+$header-menu-item-color: rgba(245, 245, 247, 0.6);
+
+$mobile-menu-bg-color: #242429;
+$mobile-menu-bg-gradient: linear-gradient(to top, #1e2125 0%, rgba(30, 33, 37, 0) 100%),
+  #000;
+
+$overlay-color: rgba(3, 3, 3, 0.6);
+
+$main-color-black: #000;
+$body-text-color: #f3f3f3;
+
+$link-color: #16a7ff;
+$link-color-hover: #56bfff;
+
+$text-color: #898989;
+$text-color-lighter: #ababae;
+$text-color-light: #c3c3c3;
+$text-color-lightest: #f5f5f7;
+
 $font-size-xxs: 12px;
 $font-size-xs: 16px;
 $font-size-s: 18px;
@@ -89,3 +88,12 @@ $transition-long: 0.3s;
 $gradient-start: #16a7ff;
 $gradient-end: #1981cc;
 $gradient: linear-gradient(90deg, $gradient-start, #16a7ff, $gradient-end);
+
+$mobile-s: 320px;
+$mobile-m: 375px;
+$mobile-l: 568px;
+$tablet: 768px;
+$tablet-m: 900px;
+$tablet-l: 1024px;
+$desktop: 1200px;
+$desktop-l: 1440px;
