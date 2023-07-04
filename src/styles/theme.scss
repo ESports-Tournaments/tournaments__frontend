@@ -1,4 +1,6 @@
 :root {
+  --appbar-bg-color: #242429;
+
   --header-menu-item-color: rgba(245, 245, 247, 0.6);
 
   --mobile-menu-bg-gradient: linear-gradient(to top, #1e2125 0%, rgba(30, 33, 37, 0) 100%),
@@ -12,8 +14,15 @@
 
   --white-color: #fff;
 
+  --main-color-black: #000;
+
   --text-color: #898989;
   --text-color-lighter: #ababae;
   --text-color-light: #c3c3c3;
   --text-color-lightest: #f5f5f7;
+
+  --body-text-color: #f3f3f3;
+
+  --link-color: #16a7ff;
+  --link-color-hover: #56bfff;
 }

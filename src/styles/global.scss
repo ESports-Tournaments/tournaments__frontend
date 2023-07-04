@@ -14,8 +14,8 @@ html {
 }
 
 body {
-  background-color: #000;
-  color: #f3f3f3;
+  background-color: var(--main-color-black);
+  color: var(--body-text-color);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -32,9 +32,13 @@ body {
 }
 
 a {
-  color: #16a7ff;
+  color: var(--link-color);
   text-decoration: none;
   background-color: transparent;
+
+  &:hover {
+    color: var(--link-color-hover);
+  }
 }
 
 .mobileMenuOpened {
