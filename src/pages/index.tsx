@@ -4,7 +4,7 @@ import { Route, Routes } from 'react-router-dom';
 import { NotFound } from '~/components/NotFound';
 import { RootLayout } from '~/layout/RootLayout';
 
-import { HomePage } from './HomePage';
+import { HomePage } from './Home';
 
 const Routing: FC = () => {
   return (

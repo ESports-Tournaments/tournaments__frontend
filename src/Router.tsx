@@ -1,7 +1,7 @@
 import { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import HomePage from '~/pages/Home';
+import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import NotFoundPage from '~/pages/NotFoundPage';
 import Profile from '~/pages/Profile';
@@ -36,7 +36,7 @@ const router = createBrowserRouter([
   },
   {
     path: RouteNames.HOME,
-    element: <HomePage />,
+    element: <Home />,
   },
   {
     path: RouteNames.NOTFOUNDPAGE,
