@@ -1,0 +1,37 @@
+.root {
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.31), inset 0 -1px 0 0 hsla(0, 0%, 100%, 0.1);
+  color: $header-menu-item-color;
+}
+
+.container {
+  white-space: nowrap;
+  overflow: auto;
+  max-width: 1380px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 6px;
+
+  @media (min-width: $tablet) {
+    padding: 0 14px;
+  }
+}
+
+.menuItem {
+  display: inline-block;
+  padding: 8px 16px;
+  color: $header-menu-item-color;
+  font-size: 16px;
+  font-weight: 700;
+
+  &.active,
+  &:hover {
+    color: $text-color-lightest;
+  }
+
+  &.disabled {
+    opacity: 0.4;
+    pointer-events: none;
+    cursor: not-allowed;
+    user-select: none;
+  }
+}

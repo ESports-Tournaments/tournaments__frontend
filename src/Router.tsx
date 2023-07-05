@@ -1,7 +1,8 @@
 import { FC } from 'react';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import HomePage from '~/pages/Home';
+import RootLayout from '~/layout/RootLayout';
+import Home from '~/pages/Home';
 import Login from '~/pages/Login';
 import NotFoundPage from '~/pages/NotFoundPage';
 import Profile from '~/pages/Profile';
@@ -19,28 +20,33 @@ enum RouteNames {
 
 const router = createBrowserRouter([
   {
-    path: RouteNames.LOGIN,
-    element: <Login />,
-  },
-  {
-    path: RouteNames.PROFILE,
-    element: <Profile />,
-  },
-  {
-    path: RouteNames.TEAM,
-    element: <Team />,
-  },
-  {
-    path: RouteNames.TOURNAMENTS,
-    element: <Tournaments />,
-  },
-  {
-    path: RouteNames.HOME,
-    element: <HomePage />,
-  },
-  {
-    path: RouteNames.NOTFOUNDPAGE,
-    element: <NotFoundPage />,
+    element: <RootLayout />,
+    children: [
+      {
+        path: RouteNames.LOGIN,
+        element: <Login />,
+      },
+      {
+        path: RouteNames.PROFILE,
+        element: <Profile />,
+      },
+      {
+        path: RouteNames.TEAM,
+        element: <Team />,
+      },
+      {
+        path: RouteNames.TOURNAMENTS,
+        element: <Tournaments />,
+      },
+      {
+        path: RouteNames.HOME,
+        element: <Home />,
+      },
+      {
+        path: RouteNames.NOTFOUNDPAGE,
+        element: <NotFoundPage />,
+      },
+    ],
   },
 ]);
 

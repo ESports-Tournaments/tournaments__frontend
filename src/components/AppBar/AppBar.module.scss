@@ -1,0 +1,67 @@
+.root {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: $appbar-bg-color;
+  height: 64px;
+
+  @media (min-width: $tablet) {
+    position: static;
+  }
+
+  @media (min-width: $tablet-l) {
+    height: 66px;
+  }
+}
+
+.container {
+  position: relative;
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1380px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 15;
+
+  @media (min-width: $tablet-l) {
+    padding: 0 30px;
+  }
+}
+
+.mobileMenuToggle {
+  color: $white-color;
+  composes: btnReset from global;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-l) {
+    display: none;
+  }
+}
+
+.logo {
+  color: $white-color;
+  display: flex;
+  align-items: center;
+  height: 64px;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.left {
+  display: flex;
+  margin-right: 16px;
+}
+
+.userAvatar {
+  width: 36px;
+  height: 36px;
+  background: $main-color-black;
+  border-radius: 100%;
+}

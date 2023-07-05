@@ -1,4 +1,4 @@
-import type { RootState } from '~/store';
+import { RootState } from '~/store';
 
 const selectModule = (state: RootState) => state.example;
 
