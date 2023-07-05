@@ -1,4 +1,4 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 
 import style from './MobileMenu.module.scss';
 

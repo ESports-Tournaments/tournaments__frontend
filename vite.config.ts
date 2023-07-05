@@ -1,7 +1,6 @@
 import react from '@vitejs/plugin-react';
 import { visualizer } from 'rollup-plugin-visualizer';
-import type { PluginOption } from 'vite';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig, loadEnv, PluginOption } from 'vite';
 import { ViteWebfontDownload } from 'vite-plugin-webfont-dl';
 import tsconfigPaths from 'vite-tsconfig-paths';
 

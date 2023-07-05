@@ -1,5 +1,7 @@
-import type { FC } from 'react';
+import { FC } from 'react';
 
-export const NotFound: FC = () => {
+const NotFound: FC = () => {
   return <div>Страница не найдена</div>;
 };
+
+export default NotFound;

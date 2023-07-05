@@ -1,4 +1,4 @@
-import type { StorybookConfig } from '@storybook/react-vite';
+import { StorybookConfig } from '@storybook/react-vite';
 
 const config: StorybookConfig = {
   stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|ts|tsx)'],
@@ -12,11 +12,11 @@ const config: StorybookConfig = {
 
   framework: {
     name: '@storybook/react-vite',
-    options: {}
+    options: {},
   },
 
   docs: {
-    autodocs: 'tag'
+    autodocs: 'tag',
   },
 };
 export default config;
