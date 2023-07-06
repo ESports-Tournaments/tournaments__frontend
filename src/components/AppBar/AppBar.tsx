@@ -4,8 +4,10 @@ import { type FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import MobileMenu from '~/components/MobileMenu';
+import Navigation from '~/components/Navigation';
 
 import style from './AppBar.module.scss';
+import { NAV_ITEMS } from './const';
 
 export const AppBar: FC = () => {
   const [menuOpened, setMenuOpened] = useState(false);
@@ -39,9 +41,11 @@ export const AppBar: FC = () => {
           <Link className={style.logo} to="/">
             LOGO
           </Link>
+          <Navigation items={NAV_ITEMS} />
         </div>
-
-        <Link to="/profile" className={style.userAvatar} />
+        <Link to="/profile" className={style.userAvatar}>
+          <div className={style.avatar} />
+        </Link>
       </div>
 
       {menuOpened && <MobileMenu onClose={closeMenu} />}
