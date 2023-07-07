@@ -1,7 +1,7 @@
 export const GAME_ITEMS = [
   { label: 'Бесплатные', path: '##' },
   { label: 'Платные', path: '##' },
-  { label: 'Простые', path: '##' },
+  { label: 'Простые', path: '##', imageSrc: '' },
   { label: 'Новинки', path: '##' },
   { label: 'Облачные', path: '##' },
   { label: 'Торговая площадка', path: '##' },

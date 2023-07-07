@@ -62,7 +62,16 @@ const Navigation = forwardRef<NavRef, NavProps>(({ items }, ref) => {
             {dropdown && (
               <ul className={style.dropdown} ref={dropdownRef}>
                 {dropdown.map((dropdownItem) => (
-                  <li key={dropdownItem.label} className={style.dropdownItem}>
+                  <li
+                    key={dropdownItem.label}
+                    className={clsx(style.dropdownItem, {
+                      [style.dropdownItemSeparator]:
+                        dropdownItem.label === 'Платные' ||
+                        dropdownItem.label === 'Облачные' ||
+                        dropdownItem.label === 'База игр',
+                      [style.dropdownItemIcon]: dropdownItem.label === 'Простые',
+                    })}
+                  >
                     <Link
                       to={`${path}${dropdownItem.path}`}
                       className={style.dropdownLink}
