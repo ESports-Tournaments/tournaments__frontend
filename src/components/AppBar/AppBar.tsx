@@ -39,7 +39,7 @@ export const AppBar: FC = () => {
           </button>
 
           <Link className={style.logo} to="/">
-            LOGO
+            Play
           </Link>
           <Navigation items={NAV_ITEMS} />
         </div>

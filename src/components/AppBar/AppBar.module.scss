@@ -46,12 +46,16 @@
 
 .logo {
   color: $white-color;
-  display: flex;
-  align-items: center;
   height: 64px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 22px;
+  line-height: 66px;
+  margin-right: 18px;
+
+  &:hover {
+    color: $white-color;
+  }
 }
 
 .left {
@@ -71,7 +75,7 @@
 .avatar {
   width: 36px;
   height: 36px;
-  background: url("/userAvatar.png") no-repeat center;
+  background: url("./userAvatar.png") no-repeat center;
   background-size: 26px 26px;
   border-radius: 50%;
 }

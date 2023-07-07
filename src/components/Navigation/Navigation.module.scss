@@ -12,27 +12,32 @@
 }
 
 .navigationItem {
-  padding: 0 12px;
   position: relative;
   display: inline-block;
   vertical-align: top;
-  height: 66px;
+
   line-height: 66px;
   font-size: $font-size-s;
   font-weight: 600;
+
+  padding: 0 12px;
+  height: 66px;
 }
 
 .navigationLink {
   position: relative;
   display: inline-block;
   vertical-align: middle;
+
   line-height: 21px;
   padding: 8px 0;
+
   white-space: nowrap;
   cursor: pointer;
   background-color: transparent;
   color: $main-color-white;
   opacity: .8;
+
   transition: opacity .1s;
 
   &::after {
@@ -42,6 +47,7 @@
     right: 0;
     bottom: 0;
     height: 4px;
+
     background-color: transparent;
     border-radius: 9px;
     opacity: 0.8;
@@ -49,7 +55,8 @@
   }
 
   &:hover::after {
-    background-color: $main-color-white;
+    background-color: hsla(0, 0%, 100%, .8);
+    opacity: 1;
   }
 }
 
@@ -63,22 +70,19 @@
   }
 }
 
-.navigationLink,
-.navigationLink:hover,
-.navigationLink:active,
-.navigationLink:visited,
-.navigationLink:focus {
-  color: $white-color;
-}
-
 .navigationItemOpen>.dropdown {
   display: block;
 }
 
 
-.navigationItemOpen .navigation__link {
+.navigationItemOpen .navigationLink {
   color: $main-color-white;
   opacity: 1;
+
+  &::after {
+    background-color: $main-color-white;
+    opacity: 1;
+  }
 }
 
 .dropdown {
@@ -87,8 +91,10 @@
   z-index: 50;
   top: 100%;
   left: 0;
+
   margin-top: -15px;
   padding: 8px 0;
+
   white-space: nowrap;
   min-width: 100%;
   background-color: $bg-dropdown-color;
@@ -108,27 +114,61 @@
   position: relative;
   display: block;
   padding: 0 16px;
+
   font-size: $font-size-info;
   line-height: 32px;
   font-weight: 400;
   min-height: 32px;
-  cursor: pointer;
-  transition: background-color .1s;
-  opacity: .8;
+
+
   color: $white-color;
+  cursor: pointer;
+  opacity: .8;
+  transition: background-color .1s;
 
   &:hover {
     opacity: 1;
     background-color: rgba(0, 0, 0, .25);
-    color: $white-color
+    color: $white-color;
   }
 }
 
-.dropdownLink,
-.dropdownLink:active,
-.dropdownLink:focus,
-.dropdownLink:hover,
-.dropdownLink:link,
-.dropdownLink:visited {
-  color: $white-color;
+.dropdownItemSeparator {
+  margin-bottom: 13px;
+  position: relative;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 18px;
+
+    background-color: $btn-dark-color;
+    opacity: 1;
+
+    width: calc(100% - 40px);
+    height: 1px;
+    min-height: 1px;
+    cursor: default;
+  }
+}
+
+.dropdownItemIcon {
+  min-width: 180px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    width: 42px;
+    height: 21px;
+
+    pointer-events: none;
+    background-image: url("./simpleGames.png");
+    transform: translateY(-50%);
+    background-size: cover;
+  }
 }
