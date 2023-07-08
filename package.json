@@ -15,8 +15,10 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^1.9.5",
+    "@types/lodash.get": "^4.4.7",
     "clsx": "^1.2.1",
     "compose-function": "^3.0.3",
+    "lodash.get": "^4.4.2",
     "modern-normalize": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
