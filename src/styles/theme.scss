@@ -89,6 +89,11 @@ $gradient-start: #16a7ff;
 $gradient-end: #1981cc;
 $gradient: linear-gradient(90deg, $gradient-start, #16a7ff, $gradient-end);
 
+$table-head-cell-bg: #2d2d30;
+$table-head-cell-text-color: #979797;
+$table-odd-row-bg: #100f0f;
+$table-even-row-bg: #161516;
+
 $mobile-s: 320px;
 $mobile-m: 375px;
 $mobile-l: 568px;
