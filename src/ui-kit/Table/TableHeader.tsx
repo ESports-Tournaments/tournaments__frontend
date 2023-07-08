@@ -14,7 +14,6 @@ export default function TableHeader<T>({ columns }: Props<T>) {
         <th
           key={`table-head-cell-${columnIndex}`}
           className={clsx(style.tableCell, style.tableCellHead)}
-          style={{ width: column.width }}
         >
           {column.title}
         </th>
