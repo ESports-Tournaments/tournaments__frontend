@@ -47,7 +47,40 @@ export const Default: Story = {
   },
 };
 
-export const WithCustomRenderData: Story = {
+export const WithCustomJSXInColumn: Story = {
+  args: {
+    columns: [
+      {
+        title: 'Name',
+        key: 'name',
+      },
+      {
+        title: 'Tags',
+        key: 'tags',
+        render: (_, { tags }) => (
+          <>
+            {tags.map((tag, tagIndex) => (
+              <span
+                key={`tag-${tagIndex}`}
+                style={{ background: 'tomato', marginLeft: 10 }}
+              >
+                {tag}
+              </span>
+            ))}
+          </>
+        ),
+      },
+    ],
+    data: [
+      {
+        name: 'Joe Black',
+        tags: ['cool', 'teacher', 'cool'],
+      },
+    ],
+  },
+};
+
+export const WithCustomJSXInCell: Story = {
   args: {
     columns: [
       ...Default.args.columns,
