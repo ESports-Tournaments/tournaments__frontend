@@ -18,6 +18,6 @@ export type ColumnType<T> = {
 
 export type ColumnsType<T> = ColumnType<T>[];
 
-export type DefaultRecordType = Record<string, unknown>;
+export type DefaultRecordType = Record<string, any>;
 
 export type RowKey<T> = string | ((record: T, index: number) => string);
