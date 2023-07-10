@@ -1,2 +1,2 @@
+export type { ColumnsType } from './interface';
 export { default } from './Table';
-export type { ColumnsType } from './types';

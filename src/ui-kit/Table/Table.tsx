@@ -1,14 +1,15 @@
+import { ColumnsType, DefaultRecordType, RowKey } from './interface';
 import style from './Table.module.scss';
 import TableHeader from './TableHeader';
 import TableRow from './TableRow';
-import { ColumnsType } from './types';
 
 type Props<T> = {
   data: readonly T[];
   columns: ColumnsType<T>;
+  rowKey?: RowKey<T>;
 };
 
-export default function Table<T>({ columns, data }: Props<T>) {
+export default function Table<T extends DefaultRecordType>({ columns, data }: Props<T>) {
   return (
     <div className={style.tableWrapper}>
       <table className={style.table}>
