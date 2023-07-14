@@ -1,0 +1,71 @@
+.tableWrapper {
+  width: 100%;
+  overflow: auto;
+  border-radius: 6px;
+}
+
+.table {
+  min-width: 700px;
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: initial;
+}
+
+.tableRow {
+  &:nth-child(odd) {
+    border-color: $table-odd-row-bg;
+    background: $table-odd-row-bg;
+  }
+
+  &:nth-child(2n) {
+    border-color: $table-even-row-bg;
+    background: $table-even-row-bg;
+  }
+}
+
+.tableCell {
+  border: 2px solid;
+  font-weight: 400;
+}
+
+.tableCellHead {
+  padding: 12px 8px;
+  font-size: 12px;
+  line-height: 16px;
+  background: $table-head-cell-bg;
+  border-color: $table-head-cell-bg;
+  color: $table-head-cell-text-color;
+
+  &:first-child {
+    text-align: left;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 12px 20px;
+  }
+}
+
+.tableCellBody {
+  text-align: center;
+  color: $text-color-lightest;
+  font-size: 12px;
+  line-height: 16px;
+  border-color: inherit;
+  padding: 12px 8px;
+  white-space: nowrap;
+
+  &:first-child {
+    text-align: left;
+    white-space: normal;
+  }
+
+  @media (min-width: $tablet) {
+    padding: 20px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
+
+.tableCellLeft {
+  text-align: left;
+}
