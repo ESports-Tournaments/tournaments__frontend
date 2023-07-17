@@ -4,7 +4,7 @@ import { type FC, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 import MobileMenu from '~/components/MobileMenu';
-import Navigation from '~/components/Navigation';
+import NavItem from '~/components/NavItem';
 
 import style from './AppBar.module.scss';
 import { NAV_ITEMS } from './const';
@@ -41,7 +41,14 @@ export const AppBar: FC = () => {
           <Link className={style.logo} to="/">
             Play
           </Link>
-          <Navigation items={NAV_ITEMS} />
+
+          <nav className={style.menu}>
+            <ul className={style.navigation}>
+              {NAV_ITEMS.map((item) => (
+                <NavItem key={item.label} {...item} />
+              ))}
+            </ul>
+          </nav>
         </div>
         <Link to="/profile" className={style.userAvatar}>
           <div className={style.avatar} />
