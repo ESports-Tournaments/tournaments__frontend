@@ -24,8 +24,8 @@ type ListItemProps = {
 
 const NavigationMenu: FC<NavigationMenuProps> = ({ items }) => {
   return (
-    <Navigation.Root className={style.NavigationMenuRoot}>
-      <Navigation.List className={style.NavigationMenuList}>
+    <Navigation.Root className={style.menuRoot}>
+      <Navigation.List className={style.menuList}>
         {items.map((item) => (
           <NavItem key={item.label} {...item} />
         ))}
@@ -44,16 +44,13 @@ const NavItem: FC<NavItemProps> = ({ label, path, dropdown }) => {
   };
 
   return (
-    <Navigation.Item className={style.NavigationMenuItem}>
-      <Navigation.Trigger
-        className={style.NavigationMenuTrigger}
-        onKeyDown={handleKeyDown}
-      >
+    <Navigation.Item className={style.menuItem}>
+      <Navigation.Trigger className={style.menuTrigger} onKeyDown={handleKeyDown}>
         <NavLink
           to={path}
           className={({ isActive }) =>
-            clsx(style.NavigationMenuLink, {
-              [style.NavigationMenuLinkActive]: isActive,
+            clsx(style.menuLink, {
+              [style.menuLinkActive]: isActive,
             })
           }
           ref={ref}
@@ -62,9 +59,9 @@ const NavItem: FC<NavItemProps> = ({ label, path, dropdown }) => {
         </NavLink>
       </Navigation.Trigger>
       {dropdown && (
-        <Navigation.Content className={style.NavigationMenuContent}>
-          <Navigation.Sub className={style.Sub}>
-            <Navigation.List className={style.List}>
+        <Navigation.Content className={style.menuContent}>
+          <Navigation.Sub className={style.subMenu}>
+            <Navigation.List className={style.list}>
               {dropdown.map((dropdownItem) => (
                 <ListItem
                   key={dropdownItem.label}
@@ -83,15 +80,15 @@ const NavItem: FC<NavItemProps> = ({ label, path, dropdown }) => {
 
 const ListItem = forwardRef<HTMLAnchorElement, PropsWithChildren<ListItemProps>>(
   ({ children, className, label, path, href }, forwardedRef) => (
-    <li className={style.ListItem}>
+    <li className={style.listItem}>
       <Navigation.Link asChild>
         <Link
           to={`${href}${path}`}
-          className={clsx(style.ListItemLink, className)}
+          className={clsx(style.listItemLink, className)}
           ref={forwardedRef}
         >
-          <div className={style.ListItemHeading}>{label}</div>
-          <p className={style.ListItemText}>{children}</p>
+          <div className={style.listItemHeading}>{label}</div>
+          <p className={style.listItemText}>{children}</p>
         </Link>
       </Navigation.Link>
     </li>

@@ -3,7 +3,7 @@ p {
   all: unset;
 }
 
-.NavigationMenuRoot {
+.menuRoot {
   position: relative;
   display: flex;
   justify-content: center;
@@ -14,7 +14,7 @@ p {
   }
 }
 
-.NavigationMenuList {
+.menuList {
   display: flex;
   justify-content: center;
   background-color: transparent;
@@ -23,28 +23,28 @@ p {
   margin: 0;
 }
 
-.NavigationMenuLink {
+.menuLink {
   padding: 8px 0;
 }
 
-.NavigationMenuTrigger {
+.menuTrigger {
   padding: 0 12px;
   height: 64px;
 }
 
-.NavigationMenuTrigger,
-.NavigationMenuLink {
+.menuTrigger,
+.menuLink {
   outline: none;
   user-select: none;
-  border-radius: 6px;
+  border-radius: 3px;
 }
 
-.NavigationMenuTrigger:focus-visible,
-.NavigationMenuLink:focus-visible {
+.menuTrigger:focus-visible,
+.menuLink:focus-visible {
   box-shadow: 0 0 0 1px $main-color-white;
 }
 
-.NavigationMenuLink {
+.menuLink {
   display: block;
   text-decoration: none;
   position: relative;
@@ -57,7 +57,7 @@ p {
   }
 }
 
-.NavigationMenuLink {
+.menuLink {
 
   &::after {
     content: "";
@@ -79,12 +79,12 @@ p {
   }
 }
 
-.NavigationMenuTrigger[data-state='open']>.NavigationMenuLink::after {
+.menuTrigger[data-state='open']>.menuLink::after {
   background-color: hsla(0, 0%, 100%, .8);
   opacity: 1;
 }
 
-.NavigationMenuLinkActive {
+.menuLinkActive {
   color: $main-color-white;
   opacity: 1;
 
@@ -99,11 +99,11 @@ p {
   }
 }
 
-.Sub {
+.subMenu {
   position: relative;
 }
 
-.List {
+.list {
   position: absolute;
   width: max-content;
   list-style: none;
@@ -125,7 +125,7 @@ p {
   box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
 }
 
-.ListItem {
+.listItem {
   position: relative;
   display: block;
   padding: 0;
@@ -149,13 +149,13 @@ p {
   }
 }
 
-.ListItemLink {
+.listItemLink {
   display: block;
   outline: none;
   text-decoration: none;
   user-select: none;
   padding: 0 16px;
-  border-radius: 6px;
+  border-radius: 3px;
 
   position: relative;
 
@@ -177,6 +177,6 @@ p {
   }
 }
 
-.ListItemLink:focus-visible {
+.listItemLink:focus-visible {
   box-shadow: 0 0 0 1px $main-color-white;
 }
