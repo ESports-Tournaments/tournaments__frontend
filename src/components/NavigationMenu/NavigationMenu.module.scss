@@ -1,0 +1,182 @@
+button,
+p {
+  all: unset;
+}
+
+.NavigationMenuRoot {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  @media (max-width: $tablet-l) {
+    display: none;
+  }
+}
+
+.NavigationMenuList {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.NavigationMenuLink {
+  padding: 8px 0;
+}
+
+.NavigationMenuTrigger {
+  padding: 0 12px;
+  height: 64px;
+}
+
+.NavigationMenuTrigger,
+.NavigationMenuLink {
+  outline: none;
+  user-select: none;
+  border-radius: 6px;
+}
+
+.NavigationMenuTrigger:focus-visible,
+.NavigationMenuLink:focus-visible {
+  box-shadow: 0 0 0 1px $main-color-white;
+}
+
+.NavigationMenuLink {
+  display: block;
+  text-decoration: none;
+  position: relative;
+  color: $main-color-white;
+  opacity: .8;
+
+  &:hover {
+    color: $main-color-white;
+    opacity: 1;
+  }
+}
+
+.NavigationMenuLink {
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+
+    background-color: transparent;
+    border-radius: 9px;
+    opacity: 0.8;
+    transition: opacity .1s;
+  }
+
+  &:hover::after {
+    background-color: hsla(0, 0%, 100%, .8);
+    opacity: 1;
+  }
+}
+
+.NavigationMenuTrigger[data-state='open']>.NavigationMenuLink::after {
+  background-color: hsla(0, 0%, 100%, .8);
+  opacity: 1;
+}
+
+.NavigationMenuLinkActive {
+  color: $main-color-white;
+  opacity: 1;
+
+  &::after {
+    background-image: $main-gradient;
+    opacity: 1;
+  }
+
+  &:hover {
+    color: $main-color-white;
+    opacity: 1;
+  }
+}
+
+.Sub {
+  position: relative;
+}
+
+.List {
+  position: absolute;
+  width: max-content;
+  list-style: none;
+
+  display: block;
+  position: absolute;
+  z-index: 50;
+  top: 100%;
+  left: 0;
+
+  margin-top: -14px;
+  padding: 8px 0;
+
+  white-space: nowrap;
+  min-width: 100%;
+  background-color: $bg-dropdown-color;
+  border: 1px solid $dropdown-border-color;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.ListItem {
+  position: relative;
+  display: block;
+  padding: 0;
+  list-style: none;
+
+  font-size: $font-size-info;
+  line-height: 32px;
+  font-weight: $fontNormal;
+  min-height: 32px;
+
+
+  color: $white-color;
+  cursor: pointer;
+  opacity: .8;
+  transition: background-color .1s;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .25);
+    color: $white-color;
+  }
+}
+
+.ListItemLink {
+  display: block;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+  padding: 0 16px;
+  border-radius: 6px;
+
+  position: relative;
+
+  font-size: $font-size-info;
+  line-height: 32px;
+  font-weight: $fontNormal;
+  min-height: 32px;
+
+
+  color: $white-color;
+  cursor: pointer;
+  opacity: .8;
+  transition: background-color .1s;
+
+  &:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, .25);
+    color: $white-color;
+  }
+}
+
+.ListItemLink:focus-visible {
+  box-shadow: 0 0 0 1px $main-color-white;
+}
