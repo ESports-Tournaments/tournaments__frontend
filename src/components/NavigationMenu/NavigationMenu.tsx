@@ -1,6 +1,6 @@
 import * as Navigation from '@radix-ui/react-navigation-menu';
 import clsx from 'clsx';
-import { FC, forwardRef, KeyboardEvent, PropsWithChildren, useRef } from 'react';
+import { FC, KeyboardEvent, useRef } from 'react';
 import { Link, NavLink } from 'react-router-dom';
 
 import style from './NavigationMenu.module.scss';
@@ -78,21 +78,21 @@ const NavItem: FC<NavItemProps> = ({ label, path, dropdown }) => {
   );
 };
 
-const ListItem = forwardRef<HTMLAnchorElement, PropsWithChildren<ListItemProps>>(
-  ({ children, className, label, path, href }, forwardedRef) => (
-    <li className={style.listItem}>
-      <Navigation.Link asChild>
-        <Link
-          to={`${href}${path}`}
-          className={clsx(style.listItemLink, className)}
-          ref={forwardedRef}
-        >
-          <div className={style.listItemHeading}>{label}</div>
-          <p className={style.listItemText}>{children}</p>
-        </Link>
-      </Navigation.Link>
-    </li>
-  ),
+const ListItem: FC<ListItemProps> = ({ className, label, path, href }) => (
+  <li className={style.listItem}>
+    <Navigation.Link asChild>
+      <Link
+        to={`${href}${path}`}
+        className={clsx(style.listItemLink, className, {
+          [style.listItemLinkSeparator]:
+            label === 'Платные' || label === 'Облачные' || label === 'База игр',
+          [style.listItemLinkIcon]: label === 'Простые',
+        })}
+      >
+        {label}
+      </Link>
+    </Navigation.Link>
+  </li>
 );
 
 export default NavigationMenu;
