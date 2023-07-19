@@ -26,6 +26,6 @@ export const MEDIA_ITEMS = [
 export const NAV_ITEMS = [
   { label: 'Игры', path: '/games', dropdown: GAME_ITEMS },
   { label: 'Live', path: '/live' },
-  { label: 'Турниры', path: '/', dropdown: TOURNAMENTS_ITEMS },
+  { label: 'Турниры', path: '/tournaments', dropdown: TOURNAMENTS_ITEMS },
   { label: 'Media', path: '/media', dropdown: MEDIA_ITEMS },
 ];
