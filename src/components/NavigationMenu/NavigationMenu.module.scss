@@ -1,0 +1,213 @@
+button {
+  all: unset;
+}
+
+.menuRoot {
+  @media (max-width: $tablet-l) {
+    display: none;
+  }
+}
+
+.menuList {
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+.menuTrigger {
+  display: inline-block;
+  vertical-align: top;
+
+  padding: 0 12px;
+  line-height: 66px;
+  height: 66px;
+  font-size: $font-size-s;
+  font-weight: $fontMedium;
+}
+
+.menuTrigger,
+.menuLink {
+  outline: none;
+  user-select: none;
+  border-radius: 3px;
+}
+
+.menuTrigger:focus-visible,
+.menuLink:focus-visible {
+  box-shadow: 0 0 0 1px $main-color-white;
+}
+
+.menuLink {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+
+  line-height: 21px;
+  padding: 8px 0;
+
+  white-space: nowrap;
+  cursor: pointer;
+  background-color: transparent;
+  color: $main-color-white;
+  opacity: .8;
+
+  transition: opacity .1s;
+
+  &:hover {
+    color: $white-color;
+    opacity: 1;
+    transition: opacity .1s;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 4px;
+
+    background-color: transparent;
+    border-radius: 9px;
+    opacity: 0.8;
+    transition: opacity .1s;
+  }
+
+  &:hover::after {
+    background-color: hsla(0, 0%, 100%, .8);
+    opacity: 1;
+  }
+}
+
+
+
+.menuTrigger[data-state='open']>.menuLink {
+  color: $main-color-white;
+  opacity: 1;
+
+  &::after {
+    background-color: hsla(0, 0%, 100%, .8);
+    opacity: 1;
+  }
+}
+
+.menuLinkActive {
+  color: $main-color-white;
+  opacity: 1;
+
+  &::after {
+    background-image: $main-gradient;
+    opacity: 1;
+  }
+}
+
+.subMenu {
+  position: relative;
+}
+
+.list {
+  position: absolute;
+
+  display: block;
+  z-index: 50;
+  top: 100%;
+  left: 0;
+
+  width: max-content;
+  list-style: none;
+  margin-top: -15px;
+  padding: 8px 0;
+
+  white-space: nowrap;
+  background-color: $bg-dropdown-color;
+  border: 1px solid $dropdown-border-color;
+  border-radius: 6px;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, .25);
+}
+
+.listItem {
+  display: block;
+  line-height: normal;
+  white-space: nowrap;
+}
+
+.listItemLink {
+  position: relative;
+
+  display: block;
+  outline: none;
+  text-decoration: none;
+  user-select: none;
+
+  padding: 0 16px;
+  border-radius: 3px;
+
+
+  font-size: $font-size-info;
+  line-height: 32px;
+  font-weight: $fontNormal;
+
+  min-height: 32px;
+
+  color: $main-color-white;
+  cursor: pointer;
+  opacity: .8;
+  transition: background-color .1s;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, .25);
+    color: $white-color;
+    opacity: 1;
+  }
+}
+
+.listItemLink:focus-visible {
+  background-color: rgba(0, 0, 0, .25);
+  color: $white-color;
+  opacity: 1;
+  box-shadow: 0 0 0 1px $main-color-white;
+}
+
+.listItemLinkSeparator {
+  position: relative;
+  margin-bottom: 13px;
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 38px;
+    left: 18px;
+
+    background-color: $btn-dark-color;
+    opacity: 1;
+
+    width: calc(100% - 40px);
+    height: 1px;
+    min-height: 1px;
+    cursor: default;
+  }
+}
+
+.listItemLinkIcon {
+  min-width: 180px;
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 50%;
+
+    width: 42px;
+    height: 21px;
+
+    pointer-events: none;
+    background-image: url("./simpleGames.png");
+    transform: translateY(-50%);
+    background-size: cover;
+  }
+}
